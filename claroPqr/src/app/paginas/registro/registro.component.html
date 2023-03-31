@@ -1,0 +1,88 @@
+<app-nav></app-nav>
+<body class="align bg_animate">
+
+  <div class="login">
+
+    <header class="login__header ">
+      <h2><svg class="icon">
+          <use xlink:href="#icon" />
+        </svg>Registro de clientes</h2>
+    </header>
+
+    <form class="login__form" [formGroup]="clientesLogin" (ngSubmit)="guardarcliente()">
+      <div>
+        <label>Nombre:</label>
+        <input type="text" formControlName="nombre" >
+      </div>
+
+      <div>
+        <label>Apellido: </label>
+        <input type="text" formControlName="apellido" >
+      </div>
+
+      <div>
+        <label>Nombre de usuario: </label>
+        <input type="text" formControlName="usuario">
+      </div>
+
+      <div>
+        <label>Tipos Documento: </label>
+        <select formControlName="tipo">
+          <option value="1">Cedula de ciudadania</option>
+          <option value="2">Tarjeta de identidad</option>
+          <option value="3">Cedula de extranjeria</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Documento: </label>
+        <input type="number" formControlName="documento" >
+      </div>
+
+      <div>
+        <input class="button" type="submit" value="Ingresar">
+      </div>
+
+    </form>
+
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icons">
+
+    <symbol id="icon-lock" viewBox="0 0 448 512">
+      <path
+        d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z" />
+    </symbol>
+
+  </svg>
+  <div class="burbujas">
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+    <div class="burbuja"></div>
+</div>
+</body>
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">INGRESE NUEVO SALDO</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <h4 class="modal-title">USUARIO NUEVO INGRESADO</h4>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Cerrar</button>
+  </div>
+</ng-template>

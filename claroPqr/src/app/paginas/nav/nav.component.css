@@ -1,0 +1,7 @@
+.navbar {
+  background-color: #DA291C; /* color de fondo rojo */
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* color de texto blanco */
+}
